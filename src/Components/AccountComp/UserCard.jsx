@@ -15,18 +15,20 @@ import setting from '../../Assets/Icon feather-settings.png'
 const UserCard = () => {
     const { color, setColor } = useContext(ColorContext)
     let { mode } = color
+    // console.log(mode)
     let style = {
         bgClr: mode === 'light' ? '#27BDAD' : '#112626',
         bgblnce: mode === 'light' ? 'white' : '#72FAEC'
     }
 
     const history = useHistory()
+    console.log(history.location.pathname)
     let [path, setPath] = useState('')
     // console.log(color)
     const handleDark = () => {
         localStorage.setItem('theme', 'dark')
         let set = localStorage.getItem('theme')
-        console.log(set)
+        // console.log(set)
         setColor({
             type: 'Dark',
             payload: set
@@ -54,8 +56,7 @@ const UserCard = () => {
     return (
         <React.Fragment>
             <div className='user_card_container'>
-                <div className="userCard_main_div" style={{ backgroundColor: style.bgClr }}
-                >
+                <div className="userCard_main_div" style={{ backgroundColor: style.bgClr }}>
                     <div className="user_img_div">
                         <img src={user} alt="" />
                     </div>
@@ -65,12 +66,12 @@ const UserCard = () => {
                     <div className="user_id_div"
                         style={{
                             backgroundColor: mode === 'light' ? 'white' : 'transparent',
-                            color:mode==='dark'? style.bgblnce:'', border: `1px solid ${style.bgblnce}`
+                            color: mode === 'dark' ? style.bgblnce : '', border: `1px solid ${style.bgblnce}`
                         }}
                     >
                         <p>TCN #123456789#</p>
                     </div>
-                    <div className="user_email" style={{ color:mode==='dark'? style.bgblnce:''}}>
+                    <div className="user_email" style={{ color: mode === 'dark' ? style.bgblnce : '' }}>
                         <p>username@123gmail.com</p>
                     </div>
                     <div className="user_balance_div" style={{ backgroundColor: style.bgblnce, color: style.bgClr }}>
@@ -78,13 +79,18 @@ const UserCard = () => {
                     </div>
                     <div className="user_ul_div" >
                         <ul
-                            className={mode==='light'? "user_ul":'dark_user_ul'}
+                            className={mode === 'light' ? "user_ul" : 'dark_user_ul'}
+                        >
+                            <li onClick={() => handleActive('')}
+                            style={history.location.pathname === '/' ? { backgroundColor: '#a1ece6' } : null}
+                            
                             >
-                            <li onClick={() => handleActive('')}>
                                 <img src={bar} alt="" />
                                 <span>Overview</span>
                             </li>
-                            <li onClick={() => handleActive('historic-transaction')} style={path === 'historic' ? { backgroundColor: '#a1ece6' } : null}>
+                            <li 
+                            onClick={() => handleActive('historic-transaction')} 
+                            style={history.location.pathname === '/historic-transaction' ? { backgroundColor: '#a1ece6' } : null}>
 
                                 <img src={arrow} alt="" />
                                 <span>Historic Transactions</span>
@@ -109,7 +115,9 @@ const UserCard = () => {
                                 <img src={lock} alt="" />
                                 <span>Account Security</span>
                             </li>
-                            <li onClick={() => handleActive('setting')}>
+                            <li onClick={() => handleActive('setting')}
+                            style={history.location.pathname === '/setting' ? { backgroundColor: '#a1ece6' } : null}
+                            >
                                 <img src={setting} alt="" />
                                 <span>Profile settings</span>
                             </li>
@@ -117,8 +125,11 @@ const UserCard = () => {
                     </div>
                 </div>
             </div>
+            <div className="dark_light_btn">
+
             <button onClick={handleDark}>dark</button>
             <button onClick={handleLight}>light</button>
+            </div>
         </React.Fragment>
     )
 }

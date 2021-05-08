@@ -108,10 +108,14 @@
     padding: 20px;
     border-radius: 10px;
     height: max-content;
+    /* overflow-x: scroll; */
 }
 .transaction_table_head{
     display: flex;
     justify-content: space-between;
+}
+.select_transaction_div{
+    padding: 0px 5px;
 }
 .select_transaction_div>select{
     padding: 6px 15px;
@@ -129,20 +133,32 @@
 .table_scrol{
     max-height: 30vh;
     overflow-y: scroll;
+    overflow-x: scroll;
 }
 .table_scrol::-webkit-scrollbar{
     width: 5px;
+}
+.transaction_table_main_div{
+    overflow-x: auto;
+    /* width: 100%; */
+    /* width: 900px; */
+}
+.transaction_table_div{
+    /* overflow-x: scroll; */
+    
 }
 .transaction_table_main_div>table {
     border-collapse: separate;
     border-spacing:0 10px;
     border: 0px;
     text-indent: 0;
+    /* max-width: 900px; */
     width: 100%;
     margin: 10px auto;
     margin-top: 20px;
     font-size: .9em;
     font-weight: lighter !important;
+    overflow-x: scroll;
 }
 .transaction_table_main_div>table> thead tr th{
     padding: 10px;
@@ -281,4 +297,177 @@ th:nth-child(8){
 .user_ul>li>img,.dark_user_ul>li>img{
     width: 18px;
     object-fit: cover;
+}
+
+
+@media screen and (max-width:1250px){
+    .overview_main_div{
+        margin: 20px;
+        margin-top: 50px;
+    }
+    .blnce_main_div{
+        width: 350px;
+    }
+    .chart_main_div{
+        width: 350px;
+    }
+    .bar_chart{
+        width: 300px !important;
+        margin-top: 20px;
+    }
+    .overview_right_content_div{
+        margin-left: 10px;
+    }
+}
+@media screen and (max-width:1055px){
+    .overview_main_div{
+        margin: 20px;
+        margin-top: 50px;
+    }
+    .blnce_main_div{
+        width: 320px;
+    }
+    .chart_main_div{
+        width: 320px;
+    }
+    .bar_chart{
+        width: 280px !important;
+        margin-top: 20px;
+        height: auto !important;
+    }
+    .overview_right_content_div{
+        margin-left: 10px;
+    }
+}
+@media screen and (max-width:991px){
+    .userCard_main_div,.transaction_table_main_div,.dark_light_btn{
+        display: none;
+    }
+    .overview_main_div{
+        margin: 10px;
+        margin-top: 50px;
+    }
+    .overview_right_content_div{
+        margin-left: 0px;
+    }
+    .blnce_main_div{
+        width: 400px;
+    }
+    .chart_main_div{
+        width:400px;
+    }
+    .bar_chart{
+        width: 330px !important;
+        margin-top: 20px;
+        height: auto !important;
+    }
+}
+@media screen and (max-width:831px){
+    .blnce_main_div{
+        width: 370px;
+    }
+    .chart_main_div{
+        width:370px;
+    }
+    .bar_chart{
+        width: 320px !important;
+        margin-top: 20px;
+        height: auto !important;
+    }
+}
+@media screen and (max-width:751px){
+    .your_summery_div{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .blnce_main_div{
+        width: 420px;
+        margin-top: 10px;
+    }
+    .chart_main_div{
+        width:420px;
+        margin-top: 20px;
+    }
+    .bar_chart{
+        width: 350px !important;
+        margin-top: 20px;
+        height: auto !important;
+    }
+    .transaction_table_head>h5{
+        font-size: .9rem;
+        margin-top: 10px;
+    }
+    .select_transaction_div>select,.all_trans_link{
+        font-size: .9rem;
+    }
+}
+@media screen and (max-width:521px){
+    .head0verview{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .links_divpay{
+        margin-top: 10px;
+    }
+    .all_trans_link{
+        display: none;
+    }
+}
+@media screen and (max-width:415px){
+    .blnce_main_div{
+        width: 350px;
+        margin-top: 10px;
+    }
+    .chart_main_div{
+        width:350px;
+        margin-top: 20px;
+    }
+    .bar_chart{
+        width: 300px !important;
+        margin-top: 20px;
+        height: auto !important;
+    }
+    .card_blnce>h4,.e_wallet>h4,.total_blnce>h4,.blnce_head_div>h6{
+     font-size: .9rem;
+    }
+    .blnce_head_div>select,.dark_overview{
+        font-size: .8rem;
+    }
+    .transaction_table_div{
+        padding: 20px 10px;
+    }
+    .select_transaction_div>select{
+        margin-right: 0px;
+    }
+}
+@media screen and (max-width:370px){
+    .blnce_main_div{
+        width: 320px;
+        margin-top: 10px;
+        padding: 10px;
+    }
+    .chart_main_div{
+        width:320px;
+        margin-top: 20px;
+        padding: 10px 10px;
+    }
+    .bar_chart{
+        width: 270px !important;
+        margin-top: 20px;
+        height: auto !important;
+    }
+    .transaction_table_head>h5{
+        font-size: .8rem;
+    }
+    .select_transaction_div>select{
+        font-size: .7rem;
+    }
+}
+@media screen and (max-width:340px){
+    .e_wallet, .card_blnce{
+        padding: 15px 8px;
+    }
+    .e_wallet>p, .card_blnce>p{
+       font-size: .7rem;
+    }
 }

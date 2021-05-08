@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 // assets 
 import user from '../../Assets/Group 4244.png'
 import date from '../../Assets/Group 4243.png'
@@ -7,13 +7,20 @@ import email from '../../Assets/Icon feather-mail.png'
 import pakistan from '../../Assets/Mask Group 6.png'
 import loc from '../../Assets/Path 7362.png'
 import phone from '../../Assets/Icon feather-smartphone.png'
+import { ColorContext } from '../../Context/Context'
 
-const PersonalDetail = ({ nextFunc }) => {
+const PersonalDetail = ({ nextFunc, head,height }) => {
+    const {color} = useContext(ColorContext)
+    let {mode} = color
     return (
         <div>
 
-            <div className='personal_detail_container'>
-                <p style={{ color: '#27BDAD' }}>PERSONAL DETAILS</p>
+            <div className={`personal_detail_container ${mode==='dark'? 'darK_input' :''} ${height}`}>
+                {head ?
+                    <p style={{ color:mode==='light'? '#27BDAD':'#72FAEC' }}>PERSONAL DETAILS</p>
+                    :
+                    null
+                }
                 <div className="user_name_change_input_div">
                     <div className="_name_change_div">
                         <img src={user} alt="" />
@@ -36,7 +43,10 @@ const PersonalDetail = ({ nextFunc }) => {
                     <img src={email} alt="" />
                     <input type='email' name="" placeholder='Email' />
                 </div>
-                <p style={{ color: '#27BDAD' }}>CONTACT DETAILS</p>
+                {head ?
+                    <p style={{ color:mode==='light'? '#27BDAD':'#72FAEC' }}>CONTACT DETAILS</p>
+                    : null
+                }
                 <div className="email_input_perosnal">
                     <img src={loc} alt="" />
                     <select name="" id="">
@@ -50,9 +60,17 @@ const PersonalDetail = ({ nextFunc }) => {
                     </select>
                 </div>
             </div>
-            <div className="continue_btn_div">
-                <button className='personal_cont_btn' onClick={nextFunc} >Continue</button>
-            </div>
+            {nextFunc ?
+                <div className="continue_btn_div">
+                    <button 
+                    style={{backgroundColor:mode==='light'?'':'#72FAEC',color:mode==='light'?'':'#000000'}}
+                    className='personal_cont_btn' 
+                    onClick={nextFunc}
+                     >Continue</button>
+                </div>
+                :
+                null
+            }
         </div>
     )
 }

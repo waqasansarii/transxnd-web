@@ -16,6 +16,8 @@ import ReferFriend from '../Pages/Account/ReferFriend'
 import ChangePassword from '../Pages/Account/ChangePassword'
 import ProfileSetting from '../Pages/Account/ProfileSetting'
 import CurrCard from '../Pages/Account/CardManage/CurrCard'
+import RequestCard from '../Pages/Account/RequestCard'
+import CardDone from '../Pages/Account/CardDone'
 
 
 const AppRouter  = () => {
@@ -38,6 +40,8 @@ const AppRouter  = () => {
                 <Route path='/change-password' component={ChangePassword} />
                 <Route path='/setting' component={ProfileSetting} />
                 <Route path='/active-card' component={CurrCard} />
+                <Route path='/request-new-card' component={RequestCard} />
+                <Route path='/request-done' component={CardDone} />
             </Switch>
 
         </Router>

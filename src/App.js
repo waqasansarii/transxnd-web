@@ -19,7 +19,6 @@ function App() {
     })
     if(get==='dark'){
       document.body.classList.add('black')
-
     }
    },[])
 

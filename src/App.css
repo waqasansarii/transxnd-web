@@ -8,6 +8,10 @@ p,ul,li,h1,h2,h3,h4,h5,h6{
   padding: 0px;
   list-style: none;
 }
+input,select,button{
+  border: none;
+  outline: none;
+}
 .white{
   background-color: white;
 }
