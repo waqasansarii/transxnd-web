@@ -29,8 +29,14 @@ const AccountOverview = () => {
                     <div className="head0verview">
                         <h2 style={{ color: mode === 'dark' ? 'white' : 'black' }}>Welcome to transxnd!</h2>
                         <div className="links_divpay">
-                            <Link className={mode === 'light' ? 'over_view_link' : 'dark_overview'} >Pay a bill</Link>
-                            <Link className={mode === 'light' ? 'over_view_link' : 'dark_overview'}>Send Money</Link>
+                            <Link 
+                            to='/pay-bill'
+                            className={mode === 'light' ? 'over_view_link' : 'dark_overview'}
+                             >Pay a bill</Link>
+                            <Link 
+                            className={mode === 'light' ? 'over_view_link' : 'dark_overview'}
+                            to='/select-bank'
+                            >Send Money</Link>
                         </div>
                     </div>
                     <div className="your_summery_div">
@@ -86,11 +92,14 @@ const AccountOverview = () => {
                                     backgroundColor: mode == 'light' ? '#E9F8F7' : 'transparent',
                                     border: `1px solid  ${mode === 'light' ? '#27BDAD' : '#72FAEC'}`
                                 }}
-                                 name="" id=""
                                  >
                                     <option value="Card Transaction">Card Transaction</option>
                                 </select>
-                                <Link className='all_trans_link' style={{ color: mode === 'light' ? '' : '#72FAEC' }}>View All</Link>
+                                <Link 
+                                className='all_trans_link' 
+                                style={{ color: mode === 'light' ? '' : '#72FAEC' }}
+                                to='/historic-transaction'
+                                >View All</Link>
                             </div>
                         </div>
                         <TransTable className='table_scrol' />

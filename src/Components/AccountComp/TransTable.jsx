@@ -91,6 +91,56 @@ const TransTable = ({ className }) => {
                             <td style={{ color: '#27BDAD', fontWeight: 'bold' }}>1243</td>
                             <td><img src={up} alt="" /></td>
                         </tr>
+                        <tr className={mode==='dark'? 'dark_mode_table':'light_mode_table'}>
+                            <td>abcsdfdfrerfdf</td>
+                            <td>Credit</td>
+                            <td>Card</td>
+                            <td>december 23,2020</td>
+                            <td>Miss Cecilia Kerluke</td>
+                            <td style={{ color: '#1EE834', fontWeight: 'bold' }}>12323</td>
+                            <td style={{ color: '#27BDAD', fontWeight: 'bold' }}>1243</td>
+                            <td><img src={up} alt="" /></td>
+                        </tr>
+                        <tr className={mode==='dark'? 'dark_mode_table':'light_mode_table'}>
+                            <td>abcsdfdfrerfdf</td>
+                            <td>Credit</td>
+                            <td>Card</td>
+                            <td>december 23,2020</td>
+                            <td>Miss Cecilia Kerluke</td>
+                            <td style={{ color: '#1EE834', fontWeight: 'bold' }}>12323</td>
+                            <td style={{ color: '#27BDAD', fontWeight: 'bold' }}>1243</td>
+                            <td><img src={up} alt="" /></td>
+                        </tr>
+                        <tr className={mode==='dark'? 'dark_mode_table':'light_mode_table'}>
+                            <td>abcsdfdfrerfdf</td>
+                            <td>Credit</td>
+                            <td>Card</td>
+                            <td>december 23,2020</td>
+                            <td>Miss Cecilia Kerluke</td>
+                            <td style={{ color: '#1EE834', fontWeight: 'bold' }}>12323</td>
+                            <td style={{ color: '#27BDAD', fontWeight: 'bold' }}>1243</td>
+                            <td><img src={up} alt="" /></td>
+                        </tr>
+                        <tr className={mode==='dark'? 'dark_mode_table':'light_mode_table'}>
+                            <td>abcsdfdfrerfdf</td>
+                            <td>Credit</td>
+                            <td>Card</td>
+                            <td>december 23,2020</td>
+                            <td>Miss Cecilia Kerluke</td>
+                            <td style={{ color: '#1EE834', fontWeight: 'bold' }}>12323</td>
+                            <td style={{ color: '#27BDAD', fontWeight: 'bold' }}>1243</td>
+                            <td><img src={up} alt="" /></td>
+                        </tr>
+                        <tr className={mode==='dark'? 'dark_mode_table':'light_mode_table'}>
+                            <td>abcsdfdfrerfdf</td>
+                            <td>Credit</td>
+                            <td>Card</td>
+                            <td>december 23,2020</td>
+                            <td>Miss Cecilia Kerluke</td>
+                            <td style={{ color: '#1EE834', fontWeight: 'bold' }}>12323</td>
+                            <td style={{ color: '#27BDAD', fontWeight: 'bold' }}>1243</td>
+                            <td><img src={up} alt="" /></td>
+                        </tr>
                     </tbody>
                 </table>
             </div>

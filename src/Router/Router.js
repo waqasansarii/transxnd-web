@@ -5,8 +5,9 @@ import HistoricTrans from '../Pages/Account/HistoricTrans'
 import SelectBill from '../Pages/Account/Paybill/SelectBill'
 import VendorDetail from '../Pages/Account/Paybill/VendorDetail'
 import PaymentDetailBill from '../Pages/Account/Paybill/PaymentDetailBill'
-import ConfirmOtp from '../Pages/Account/Paybill/ConfirmOtp'
-import wait from '../Pages/Account/Paybill/wait'
+import ConfirmOtpBill from '../Pages/Account/Paybill/ConfirmOtp'
+import ConfirmOtpMoney from '../Pages/Account/Money/ConfirmMoneyOtp'
+import Wait from '../Pages/Account/Paybill/wait'
 import SuccessFul from '../Pages/Account/Paybill/Successful'
 import SelectMonyMethod from '../Pages/Account/Money/SelectMonyMethod'
 import MoneyAccDetail from '../Pages/Account/Money/MoneyAccDetail'
@@ -18,6 +19,7 @@ import ProfileSetting from '../Pages/Account/ProfileSetting'
 import CurrCard from '../Pages/Account/CardManage/CurrCard'
 import RequestCard from '../Pages/Account/RequestCard'
 import CardDone from '../Pages/Account/CardDone'
+import WaitMoney from '../Pages/Account/Money/WaitMoney'
 
 
 const AppRouter  = () => {
@@ -29,8 +31,10 @@ const AppRouter  = () => {
                 <Route path='/pay-bill' component={SelectBill} />
                 <Route path='/bil-detail' component={VendorDetail} />
                 <Route path='/bil-payment' component={PaymentDetailBill} />
-                <Route path='/confrim-otp' component={ConfirmOtp} />
-                <Route path='/waiting' component={wait} />
+                <Route path='/confrim-otp' component={ConfirmOtpBill} />
+                <Route path='/money-otp-confirm' component={ConfirmOtpMoney} />
+                <Route path='/waiting' component={Wait} />
+                <Route path='/money-successful' component={WaitMoney} />
                 <Route path='/successful' component={SuccessFul} />
                 <Route path='/select-bank' component={SelectMonyMethod} />
                 <Route path='/bank_info' component={MoneyAccDetail} />

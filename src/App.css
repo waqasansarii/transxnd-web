@@ -18,3 +18,33 @@ input,select,button{
 .black{
   background-color: black;
 }
+
+.mob_back_link{
+  text-decoration: none;
+  color: #72FAEC;
+  /* margin-left: 10px; */
+}
+.mob_back_link:hover{
+  color: #72FAEC;
+}
+.bak_div{
+  display: none;
+}
+@media screen and (max-width:991px){
+  .bak_div{
+    display: block;
+    margin-top: 40px;
+    margin-left: 20px;
+  }
+  .bak_div img{
+    margin-top: -5px;
+  }
+  .bak_div span{
+    margin-left: 10px;
+  }
+}
+@media screen and (max-width:360px){
+  .bak_div{
+    margin-left: 10px;
+  }
+}

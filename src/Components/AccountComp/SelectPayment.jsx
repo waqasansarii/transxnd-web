@@ -4,6 +4,7 @@ import { ColorContext } from '../../Context/Context'
 import card1 from '../../Assets/Airtel-Logo-PNG-Image-715x269.png'
 import card2 from '../../Assets/Mask Group 15.png'
 import user from '../../Assets/Icon feather-mail.png'
+import userL from '../../Assets/Icon feather-maill.png'
 import slct from '../../Assets/Group 4580 dark.png'
 import path from '../../Assets/Path 7591.png'
 import tick from '../../Assets/Path 7452.png'
@@ -88,15 +89,24 @@ const SelectPayment = () => {
                     </div>
                 </div>
                 <div className="tick_sign_div">
-                    <div className="selecr_card_select payment_method_inp">
-                        <img src={user} alt="" />
+                    <div
+                        className={
+                            mode === 'light' ? "selecr_card_select payment_method_inp"
+                                :
+                                'payment_method_inp selecr_card_select dark_slct'
+                        }>
+                        <img src={mode==='dark'? user:userL} alt="" />
                         <input type="text" placeholder='Email address/Phone number' />
                     </div>
                     <img src={tick} alt="" />
                 </div>
                 <div className="tick_sign_div">
-                    <div className="selecr_card_select payment_method_inp">
-                        <img src={user} alt="" />
+                    <div className={
+                            mode === 'light' ? "selecr_card_select payment_method_inp"
+                                :
+                                'payment_method_inp selecr_card_select dark_slct'
+                        }>
+                        <img src={mode==='dark'? user:userL} alt="" />
                         <input type="text" placeholder='Password' />
                     </div>
                     <img src={tick} alt="" />

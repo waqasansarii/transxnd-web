@@ -325,10 +325,17 @@ position: relative;
 .active2{
     background-color: #27BDAD;
 }
+.dark_slct>input,.dark_slct>input::placeholder{
+    color: white !important;
 
+}
+.payment_method_inp{
+    border: 1px solid #27BDAD;
+}
 .selecr_card_select>select,.selecr_card_select>input{
     background-color: transparent;
-    color: #72FAEC;
+    /* color: #27BDAD; */
+    color: white;
     font-size: .8rem;
     width: 90%;
     padding-left: 10px;
@@ -476,7 +483,7 @@ position: relative;
 .request_card_thank_you{
     width: 800px;
     margin-left: 20px;
-    height: 95vh !important;
+    height: 85vh !important;
     border-radius: 10px;
     background-color: #112626;
     padding: 20px;
@@ -548,12 +555,16 @@ position: relative;
     }
 }
 @media screen and (max-width:991px){
+    .stepper_conatainer,.request_card_thank_you{
+        background: transparent !important;
+    }
     .active_card_flex_{
         flex-wrap: nowrap;
         justify-content: center;
     }
     .your_card_main_div{
         margin-left: 0px;
+        margin-top: 20px;
         /* display: none; */
     }
     .active_card_main_div{
@@ -577,6 +588,12 @@ position: relative;
     .new_card_container,.request_done_conatiner{
         margin-left: 0px;
         justify-content: center;
+    }
+    .new_card_container{
+        margin-top: 20px;
+    }
+    .request_done_conatiner{
+        margin-top: 10px;
     }
     .request_card_thank_you{
         margin-left: 0px;

@@ -7,6 +7,7 @@ import { ColorContext } from '../../Context/Context'
 import user from '../../Assets/Path 7446.png'
 import upload from '../../Assets/Group 4482.png'
 import './styles/Setting.css'
+import MobViewBack from '../../Components/MobViewBack'
 
 const ProfileSetting = () => {
 
@@ -19,6 +20,9 @@ const ProfileSetting = () => {
     }
     return (
         <div>
+            <div className="bak_div">
+                <MobViewBack link='/' value='SECURITY SETTINGS' />
+            </div>
             <div className="setting_main_div">
                 <div>
                     <UserCard />

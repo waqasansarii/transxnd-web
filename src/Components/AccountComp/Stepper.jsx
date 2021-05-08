@@ -31,8 +31,8 @@ const QontoConnector = withStyles({
     },
     completed: {
         '& $line': {
-            borderColor: ({ color }) => color.mode === 'light' ? '#44968d' : '#72faec',
-            // borderColor: '#72faec',
+            // borderColor: ({ color }) => color.mode === 'light' ? '#44968d' : '#72faec',
+            borderColor: '#72faec',
         },
     },
     line: {
@@ -120,9 +120,9 @@ export default function CStepper() {
         setActiveStep((prevActiveStep) => prevActiveStep - 1);
     };
 
-    const handleReset = () => {
-        setActiveStep(0);
-    };
+    // const handleReset = () => {
+    //     setActiveStep(0);
+    // };
 
     return (
         <div className={color.mode === 'dark' ? "stepper_conatainer" : 'light_stepper_conatainer stepper_conatainer'}>
@@ -135,7 +135,7 @@ export default function CStepper() {
                 <Stepper alternativeLabel activeStep={activeStep} connector={<QontoConnector  color={color} />}>
                     {steps.map((label, i) => (
                         <Step key={label} className={color.mode === 'dark' ? 'colors' : 'color_light_step'} >
-                            <CustomStepper color={activeStep >= i ? "inherit" : "#fff"} className={classes.size} >
+                            <CustomStepper color={activeStep >= i ? "inherit" : `${color.mode==='dark'? '#fff':'black'}`} className={classes.size} >
                                 <span className="text">
                                     {label}
                                 </span>

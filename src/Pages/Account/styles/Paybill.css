@@ -24,7 +24,8 @@
 .bill_type_select{
     display: flex;
     justify-content: space-between;
-    width: 700px;
+    flex-wrap: wrap;
+    width: 600px;
     padding: 25px;
     border-radius: 15px;
     margin: 30px auto;
@@ -59,6 +60,7 @@
     background-color: #27BDAD;
 
 }
+
 ._img_bill:hover .light_bil{
     display: none;
 }
@@ -70,6 +72,17 @@
     margin-top: 10px;
     font-weight: 600;
 
+}
+.empty_box_bil{
+    background-color: #b5e8e3;
+    border-radius: 10px;
+    width: 120px;
+    /* padding: 20px; */
+    height: 110px;
+    margin-top: 10px;
+}
+.select_bill_div_D .empty_box_bil{
+    background-color: #234c48;
 }
 .back_btn,.con_btn{
     padding: 5px 0px;
@@ -256,6 +269,10 @@ input::placeholder{
     }
     .pay_bill_main_div{
         margin: 50px 20px;
+        margin-top: 0px;
+    }
+    .bil_payment_main_div{
+        margin-top: 0px;
     }
     .bill_type_select{
         width: 700px;
@@ -310,6 +327,7 @@ input::placeholder{
     }
     .pay_bill_main_div{
         margin: 50px 10px;
+        margin-top: 0px;
     }
     .select_bill_div{
         padding: 10px 5px;

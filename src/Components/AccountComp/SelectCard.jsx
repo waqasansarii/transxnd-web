@@ -75,21 +75,13 @@ const SelectCard = () => {
                 </div>
             </div>
             <div className={mode === 'dark' ? "selecr_card_select" : 'selecr_card_select_l'}>
-                {mode === 'light' ?
-                    <img src={user} alt="" />
-                    :
-                    <img src={userD} alt="" />
-                }
+                    <img src={mode==='dark'? userD:user} alt="" />
                 <select name="" id="">
                     <option value="">Preffered City Of Delivery</option>
                 </select>
             </div>
             <div className={mode === 'dark' ? "selecr_card_select" : 'selecr_card_select_l'}>
-                {mode === 'light' ?
-                    <img src={user} alt="" />
-                    :
-                    <img src={userD} alt="" />
-                }
+                    <img src={mode==='dark'? userD:user} alt="" />
                 <select name="" id="">
                     <option value="">Select Collection Agent</option>
                 </select>

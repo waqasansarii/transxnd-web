@@ -35,6 +35,7 @@
     border: none;
     outline: none;
     color: #27BDAD;
+    font-size: .9rem;
 }
 
 .social_share_head{
@@ -66,4 +67,7 @@
 .entr_link{
     /* margin-top: 15px; */
     margin: 20px auto;
+}
+.dark_inp,.dark_inp::placeholder{
+    color: white !important;
 }
