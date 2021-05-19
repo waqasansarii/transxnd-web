@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useLayoutEffect } from 'react'
 import UserCard from '../../Components/AccountComp/UserCard'
 import PersonalDetail from '../../Components/AccountComp/PersonalDetail'
 import UploadLicns from '../../Components/AccountComp/UploadLicns'
@@ -6,6 +6,7 @@ import { ColorContext } from '../../Context/Context'
 // assets 
 import user from '../../Assets/Path 7446.png'
 import upload from '../../Assets/Group 4482.png'
+import uploadD from '../../Assets/Group 4482d.png'
 import './styles/Setting.css'
 import MobViewBack from '../../Components/MobViewBack'
 
@@ -18,6 +19,10 @@ const ProfileSetting = () => {
     const handleNext = () => {
         setNext(true)
     }
+
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     return (
         <div>
             <div className="bak_div">
@@ -45,7 +50,7 @@ const ProfileSetting = () => {
                     <div>
                         <img src={user} alt="" />
                         <div>
-                            <img className='upload_profile' src={upload} alt="" />
+                            <img className='upload_profile' src={mode==='light'? upload:uploadD} alt="" />
                         </div>
                     </div>
                 </div>

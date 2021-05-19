@@ -13,15 +13,15 @@ import bill from '../../Assets/Group 4429.png'
 import billL from '../../Assets/Group 4429l.png'
 import money from '../../Assets/Group 4430.png'
 import moneyL from '../../Assets/Group 4430l.png'
-import refer from '../../Assets/Group 4483.png'
 import referL from '../../Assets/Group 4483l.png'
+import refer from '../../Assets/Group 4483.png'
 import lockL from '../../Assets/Icon feather-lock1.png'
-import lock from '../../Assets/Icon feather-lock.png'
+import lock from '../../Assets/Icon feather-lockdd.png'
 import setting from '../../Assets/Icon feather-settings.png'
 import settingL from '../../Assets/Icon feather-settingsl.png'
 
 const UserCard = () => {
-    const { color, setColor } = useContext(ColorContext)
+    const { color} = useContext(ColorContext)
     let { mode } = color
     // console.log(mode)
     let style = {
@@ -33,29 +33,6 @@ const UserCard = () => {
     console.log(history.location.pathname)
     let [path, setPath] = useState('')
     // console.log(color)
-    const handleDark = () => {
-        localStorage.setItem('theme', 'dark')
-        let set = localStorage.getItem('theme')
-        // console.log(set)
-        setColor({
-            type: 'Dark',
-            payload: set
-        })
-        document.body.classList.remove('white')
-        document.body.classList.add('black')
-    }
-    const handleLight = () => {
-        localStorage.setItem('theme', 'light')
-        let set = localStorage.getItem('theme')
-
-        setColor({
-            type: 'light',
-            payload: set
-        })
-        document.body.classList.remove('black')
-        document.body.classList.add('white')
-    }
-
     const handleActive = (e) => {
         history.push(`/${e}`)
         setPath(e)
@@ -89,7 +66,7 @@ const UserCard = () => {
                         <ul
                             className={mode === 'light' ? "user_ul" : 'dark_user_ul'}
                         >
-                            <li onClick={() => handleActive('')}
+                            <li onClick={() => handleActive('account-overview')}
                             // style={history.location.pathname === '/' ? { backgroundColor: '#a1ece6' } : null}
                             >
                                 <img src={mode==='dark'? bar:barL} alt="" />
@@ -132,11 +109,7 @@ const UserCard = () => {
                     </div>
                 </div>
             </div>
-            <div className="dark_light_btn">
-
-            <button onClick={handleDark}>dark</button>
-            <button onClick={handleLight}>light</button>
-            </div>
+        
         </React.Fragment>
     )
 }

@@ -27,7 +27,7 @@ const SelectPayment = () => {
                 <div className="detail_payment">
                     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod te</p>
                 </div>
-                <img src={path} className='path_line' alt="" />
+                <img src={path} className='path_line_s' alt="..." />
                 <div className="billig_type_div">
                     <p>Card Issuance Fee</p>
                     <p className=''>XOF 20. <sup> 59 </sup></p>
@@ -42,7 +42,7 @@ const SelectPayment = () => {
                 <div className="detail_payment sub_billing_type_para">
                     <p>Lorem ipsum dolor sit amet,</p>
                 </div>
-                <img src={path} className='path_line' alt="" />
+                <img src={path} className='path_line_s' alt="..." />
                 <div className="billig_type_div">
                     <p>Total Fee</p>
                     <p className='card_grn' style={{ color: mode === 'light' ? '#27BDAD' : '' }}>XOF 20. <sup> 59 </sup></p>

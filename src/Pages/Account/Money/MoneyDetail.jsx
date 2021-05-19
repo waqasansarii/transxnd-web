@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useLayoutEffect } from 'react'
 import UserCard from '../../../Components/AccountComp/UserCard'
 import MobViewBack from '../../../Components/MobViewBack'
 import PaymentDetail from '../../../Utils/PaymentDetail'
 
 
 const MoenyDetail = () => {
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     return (
         <div>
             <div className="bak_div">
@@ -20,6 +23,8 @@ const MoenyDetail = () => {
                         link='/confrim-transaction'
                         backLink='/bank_info'
                         desc='Please enter amount to transfer!'
+                        amount='32143.32'
+                        title='XOF'
                     />
                 </div>
             </div>

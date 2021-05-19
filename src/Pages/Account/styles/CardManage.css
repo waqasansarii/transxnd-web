@@ -5,7 +5,7 @@
     /* justify-content: space-around; */
 }
 .active_card_main_div{
-    width: 870px;
+    width: 70%;
     border-radius: 10px;
     padding: 20px;
     margin-left: 20px;
@@ -29,7 +29,8 @@
     transition: .9s;
 }
 .acitve_cards{
-    width: 390px;
+    /* width: 390px; */
+    width: 47%;
     background: white;
     border-radius: 10px;
     padding: 15px;
@@ -105,6 +106,7 @@
   box-shadow: 
   inset -3.5em 0 0 0 #27BDAD,
   inset 3.5em 0 0  0   #27BDAD;
+  color: white !important;
 }
 .report_btn_div{
     text-align: center;
@@ -134,6 +136,7 @@
     display: none;
     /* right: 20px */
     left: -40px;
+    z-index: 9999;
 }
 .toggle_div li{
     font-size: .75rem;
@@ -149,6 +152,7 @@
 
 .active_card_flex_{
     display: flex;
+    flex-wrap: wrap;
     /* justify-content: space-between; */
 }
 
@@ -162,7 +166,7 @@
 
 .stepper_div{
     margin-left: 10px;
-    width: 850px;
+    width: 70%;
 }
 .MuiStepLabel-completed,.MuiStepIcon-root.MuiStepIcon-completed{
     color: #1EE834 !important;
@@ -220,7 +224,15 @@
 
 .user_get_detail_container{
     display: flex;
+    padding: 20px;
+    width: 650px;
+    margin: 0px auto;
+    border-radius: 10px;
+    background-color: #ddf8f6;
+}
+.user_get_detail_container2{
     background-color: #2d4b4b;
+    display: flex;
     padding: 20px;
     width: 650px;
     margin: 0px auto;
@@ -231,7 +243,16 @@
     text-align: center;
     margin: 0px auto;
 }
+.user_get_detail_container2>div{
+    width: 300px;
+    text-align: center;
+    margin: 0px auto;
+}
 .user_get_detail_container>div>h5{
+    font-size: .9rem;
+    margin-bottom: 10px;
+}
+.user_get_detail_container2>div>h5{
     font-size: .9rem;
     margin-bottom: 10px;
 }
@@ -255,7 +276,8 @@
     color: #27BDAD;
 }
 .v_line{
-    height: 45vh;
+    height: 41vh;
+    /* height: max-content; */
 }
 
 
@@ -408,7 +430,7 @@ position: relative;
 .card_grn{
     color: #72FAEC;
 }
-.path_line{
+.path_line_s{
     width: 260px;
 }
 .sub_billing_type_div{
@@ -471,7 +493,7 @@ position: relative;
     width: 35% !important;
 }
 .uploc_height{
-    height: 53vh !important;
+    height: 48vh !important;
 }
 
 /* reuquest done page  */
@@ -481,9 +503,9 @@ position: relative;
     margin-left: 30px;
 }
 .request_card_thank_you{
-    width: 800px;
+    width: 70%;
     margin-left: 20px;
-    height: 85vh !important;
+    max-height: 85vh !important;
     border-radius: 10px;
     background-color: #112626;
     padding: 20px;
@@ -511,9 +533,13 @@ position: relative;
 .user_get_detail_container::-webkit-scrollbar,.payment_method_container::-webkit-scrollbar{
     width: 5px;
 }
+.user_get_detail_container2::-webkit-scrollbar,.payment_method_container::-webkit-scrollbar{
+    width: 5px;
+}
+
 @media screen and (max-width:1200px){
     .active_card_main_div{
-        width: 760px;
+        /* width: 760px; */
         margin-left: 10px;
         padding: 10px;
     }
@@ -541,7 +567,7 @@ position: relative;
         flex-wrap: wrap;
         justify-content: center;
     }
-    .active_card_main_div{
+    /* .active_card_main_div{
         width: 600px;
         margin-left: 15px;
         padding: 10px;
@@ -549,10 +575,14 @@ position: relative;
     .acitve_cards{
         width: 450px;
         padding:  20px;
-    }
+    } */
     .your_card_main_div{
         margin-left: 15px;
     }
+    /* .toggle_div{
+        left: 0px;
+        right: 20px;
+    } */
 }
 @media screen and (max-width:991px){
     .stepper_conatainer,.request_card_thank_you{
@@ -568,12 +598,12 @@ position: relative;
         /* display: none; */
     }
     .active_card_main_div{
-        width: 100%;
+        width: 98%;
         margin-left: 0px;
-        margin: 0px;
-        padding: 0px 10px;
-        background-color: none !important;
-        background: none !important;
+        margin: 0px auto;
+        padding: 10px 10px;
+        /* background-color: none !important; */
+        /* background: none !important; */
     }
     .acitve_cards{
         width: 400px;
@@ -636,11 +666,28 @@ position: relative;
         height: 48vh;
         overflow-y: auto;
     }
+    .user_get_detail_container2{
+        flex-wrap: wrap;
+        width: 400px;
+        background-color: transparent;
+        height: 48vh;
+        overflow-y: auto;
+    }
     .user_get_detail_container>div{
         border-radius: 10px;
         padding: 10px;
-        background-color: #2d4b4b;
+        /* background-color: #2d4b4b; */
         margin-bottom: 15px;
+        width: 316px;
+        margin-top: 10px;
+    }
+    .user_get_detail_container2>div{
+        border-radius: 10px;
+        padding: 10px;
+        /* background-color: #2d4b4b; */
+        margin-bottom: 15px;
+        width: 316px;
+        margin-top: 10px;
     }
     .stepper_conatainer>p{
         width: 100%;
@@ -675,6 +722,9 @@ position: relative;
         padding: 15px;
     }
     .user_get_detail_container{
+        width: 100%;
+    }
+    .user_get_detail_container2{
         width: 100%;
     }
     .upload_lic_card{
@@ -731,6 +781,9 @@ position: relative;
     }
     .payment_method_main_div,.billing_detail_div{
         width: 290px ;
+    }
+    .selecr_card_select_l{
+         width: 290px;
     }
 }
 @media screen and (max-width:320px){

@@ -1,14 +1,17 @@
-import React, { useContext } from 'react'
+import React, { useContext, useLayoutEffect } from 'react'
 import UserCard from '../../Components/AccountComp/UserCard'
 import { ColorContext } from '../../Context/Context'
-import thankyou from '../../Assets/Group 4361.png'
+import thankyou from '../../Assets/Group 4361d.png'
+import thankyouL from '../../Assets/Group 4361l.png'
 import MobViewBack from '../../Components/MobViewBack'
 
 
 const CardDone = () => {
     const { color } = useContext(ColorContext);
     let { mode } = color
-
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     return (
         <React.Fragment>
             <div className="bak_div">
@@ -28,7 +31,7 @@ const CardDone = () => {
                             Use the button below to update your profile.
                   </p>
                         <div className='thank_you_card_para'>
-                            <img className='thanks_img' src={thankyou} alt="" />
+                            <img className='thanks_img' src={mode==='light'? thankyouL:thankyou} alt="" />
                             <h5 style={{ color: color.mode === 'light' ? '#27BDAD' : 'white' }}>Thank You</h5>
                             <p
                                 style={{ color: color.mode === 'light' ? '' : 'white' }}>

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useLayoutEffect } from 'react'
 import UserCard from '../../../Components/AccountComp/UserCard'
 import { useHistory } from 'react-router-dom'
 import card2 from '../../../Assets/Group 4569.png'
@@ -18,7 +18,9 @@ const SelectMonyMethod = () => {
     const { color } = useContext(ColorContext)
     let { mode } = color
     const history = useHistory()
-
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     return (
         <div>
             <div className="bak_div">
@@ -33,7 +35,7 @@ const SelectMonyMethod = () => {
                     <p
                         style={{ color: mode === 'light' ? '' : 'white' }}
                     >Please enter recipient details!</p>
-                    <div className="bill_type_select" >
+                    <div className="bill_type_select money_type_select" >
                         <div className="bil_type">
                             <div className="_img_bill money_selct" style={{ border: '1px solid #27BDAD' }}>
                                 <img className='light_bil' src={card} alt="" />

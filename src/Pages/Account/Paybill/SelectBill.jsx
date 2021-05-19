@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useLayoutEffect } from 'react'
 import UserCard from '../../../Components/AccountComp/UserCard'
 import { useHistory } from 'react-router-dom'
 import bulb from '../../../Assets/bil1.png'
@@ -18,13 +18,16 @@ import { ColorContext } from '../../../Context/Context'
 import MobViewBack from '../../../Components/MobViewBack'
 
 const SelectBill = () => {
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     const { color } = useContext(ColorContext)
     let { mode } = color
     const history = useHistory()
     return (
         <div className='pay_Bil_container'>
             <div className="bak_div">
-                <MobViewBack link='/' value='PAY A BILL' />
+                <MobViewBack link='/account-overview' value='PAY A BILL' />
             </div>
             <div className="pay_bill_main_div">
                 <div className="pay_user_card_div">
